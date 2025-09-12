@@ -1,1 +1,1 @@
-# genesys-cloud-cx-as-code-demo
+# Genesys Cloud: CX as Code Demo
