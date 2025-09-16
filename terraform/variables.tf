@@ -4,6 +4,6 @@ variable "environment" {
 }
 
 variable "book_purchase_queue_name" {
-  type = string
+  type        = string
   description = "Name of queue for book purchases"
 }
