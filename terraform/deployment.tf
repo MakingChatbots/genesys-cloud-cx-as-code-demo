@@ -1,10 +1,10 @@
 resource "genesyscloud_webdeployments_deployment" "contact_us" {
-  name            = "Bookshop Support"
-  description     = "Web deployment Bookshop support"
+  name              = "Bookshop Support"
+  description       = "Web deployment Bookshop support"
   allow_all_domains = true
 
   # References the flow resource the Messenger Deployment will use
-  flow_id         = genesyscloud_flow.inbound_message_flow.id
+  flow_id = genesyscloud_flow.inbound_message_flow.id
   configuration {
     # References the configuration resource above
     id      = genesyscloud_webdeployments_configuration.default.id
@@ -13,10 +13,10 @@ resource "genesyscloud_webdeployments_deployment" "contact_us" {
 }
 
 resource "genesyscloud_webdeployments_configuration" "default" {
-  name                  = "Lucas' Bookshop Config"
-  description           = "Configuration for Contact Us page"
-  languages             = ["en-us"]
-  default_language      = "en-us"
+  name             = "Lucas' Bookshop Config"
+  description      = "Configuration for Contact Us page"
+  languages        = ["en-us"]
+  default_language = "en-us"
   messenger {
     enabled = true
     launcher_button {

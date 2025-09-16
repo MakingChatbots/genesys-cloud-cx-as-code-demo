@@ -17,7 +17,7 @@ resource "genesyscloud_flow" "inbound_message_flow" {
 }
 
 resource "genesyscloud_flow" "digital_bot_flow" {
-  filepath = local.digital_bot_flow_filepath
+  filepath          = local.digital_bot_flow_filepath
   file_content_hash = filesha256(local.digital_bot_flow_filepath)
   substitutions = {
     book_purchase_queue = var.book_purchase_queue_name
